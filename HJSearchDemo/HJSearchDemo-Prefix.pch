@@ -1,0 +1,30 @@
+//
+//  HJSearchDemo-Prefix.pch
+//  HJSearchDemo
+//
+//  Created by 黄静静 on 16/9/13.
+//  Copyright © 2016年 HJing. All rights reserved.
+//
+
+#ifndef HJSearchDemo_Prefix_pch
+#define HJSearchDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* HJSearchDemo_Prefix_pch */
+
+#define _weakSelf(...) \
+rac_keywordify \
+metamacro_foreach_cxt(rac_weakify_,, __weak, __VA_ARGS__)
+
+#define _strongSelf(...) \
+rac_keywordify \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+metamacro_foreach(rac_strongify_,, __VA_ARGS__) \
+_Pragma("clang diagnostic pop")
+
+#import "RACEXTScope.h"
+#import "APPUserDefaults.h"
+#import <UIKit/UIKit.h>

@@ -1,0 +1,6 @@
+framework module RegExCategories {
+  umbrella header "RegExCategories-umbrella.h"
+
+  export *
+  module * { export * }
+}
