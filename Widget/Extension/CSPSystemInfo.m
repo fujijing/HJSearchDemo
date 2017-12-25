@@ -136,11 +136,11 @@ static const char *__jb_app = NULL;
 		return YES;
 	}
 
-	// method 3
-	if (0 == system("ls"))
-	{
-		return YES;
-	}
+//    // method 3
+//    if (0 == system("ls"))
+//    {
+//        return YES;
+//    }
 #endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
 	return NO;
